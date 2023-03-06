@@ -1,0 +1,42 @@
+.top_img{
+  margin-top: 90px;
+  text-align: center;
+}
+.Signup {
+  margin: 0 auto;
+  background-color: #ffffff;
+  width: 40%;
+  max-width: 400px;
+  min-width: 300px;
+  margin-top: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border: #b4c7e7 7px solid;
+}
+
+.text{
+  color: #000;
+}
+
+@media screen and (max-width: 480px) {
+  .signup #header h3{
+    text-align: center;
+    font-size: 80%;
+  }
+  .top_img{
+    margin: 0;
+    margin-top: 80px;
+    margin-left: -10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .top_img img{
+    text-align: center;
+    width: 323px;
+    height: 96px;
+  }
+}

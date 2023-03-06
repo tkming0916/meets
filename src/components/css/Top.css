@@ -1,0 +1,145 @@
+.top {
+  height: 80vh;
+}
+
+.top_img{
+  margin-top: 65px;
+  text-align: center;
+  width:  45%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: none;
+  margin: 0;
+}
+
+.top_img img{
+  width:  90%;
+}
+
+.top_img2{
+  text-align: center;
+  width:  60%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: none;
+}
+
+.top_img2 img{
+  width:  100%;
+}
+
+@media screen and (min-width: 480px) {
+  .top_img{
+    margin-top: 65px;
+    text-align: center;
+    width:  45%;
+    height: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: none;
+  }
+
+  .top_img img{
+    width:  100%;
+  }
+
+  .top_img2{
+    margin-top: 15px;
+    text-align: center;
+    width:  65%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: none;
+  }
+
+  .top_img2 img{
+    width:  100%;
+  }
+
+}
+
+.top .introduction{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.top .introduction h3{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.top .signin_button{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  text-align: center;
+}
+.top .signup_button{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  text-align: center;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 480px) {
+  .top {
+    background-image: none;
+  }
+  .top #header h3{
+    text-align: center;
+    font-size: 80%;
+  }
+  .top_img{
+    margin-top: 90px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .top .top_img img{
+    text-align: center;
+    width: 323px;
+    height: 96px;
+  }
+  .top_img2{
+    margin-top: 90px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .top .top_img2{
+    margin-top: 10px;
+    text-align: center;
+    width: 323px;
+    height: 96px;
+  }
+  .top .introduction{
+    width: 80%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .top .introduction h3{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 80%
+  }
+  .top .signin_button{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  .top .signup_button{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  .top .button{
+    text-align: center;
+  }
+}

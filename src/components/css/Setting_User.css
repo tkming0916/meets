@@ -1,0 +1,90 @@
+.setting_user{
+  margin: 0 auto;
+  background-color: #ffffff;
+  width: 50%;
+  max-width: 500px;
+  min-width: 400px;
+  margin-top: 90px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border: #b4c7e7 7px solid;
+	text-align: center;
+}
+
+.Setting_User_icon{
+  text-align: center;
+  border: #ccc solid 2px;
+  width: 90%;
+  margin-right: 10px ;
+  margin-left:  10px ;
+  border-radius: 13px;
+  padding: 10px;
+}
+
+.Setting_User_icon input[type=radio]{
+  display: none;
+}
+.Setting_User_icon label{
+  margin: 5px;
+  cursor: pointer;
+}
+
+
+.Setting_User_icon input[type=radio]:checked + label img{
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #b4c7e7;
+}
+
+textarea{
+  width:300px;
+}
+
+@media screen and (min-width: 480px) {
+  .Setting_User_icon img:hover{
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .setting_user{
+    margin: 0 auto;
+    background-color: #ffffff;
+    width: 40%;
+    max-width: 400px;
+    min-width: 300px;
+    margin-top: 90px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border: #b4c7e7 7px solid;
+    text-align: center;
+  }
+  .Setting_User_icon{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: #ccc solid 2px;
+    border-radius: 13px;
+    padding: 10px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .Setting_User_icon{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: #ccc solid 2px;
+    border-radius: 13px;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+  }
+}

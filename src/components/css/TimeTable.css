@@ -1,0 +1,33 @@
+*{
+  text-decoration: none;
+}
+
+main{
+  margin-top: 90px;
+}
+
+.No_Subject_Cell{
+  background-color: #DDD;
+}
+
+.Exist_Subject_Cell a{
+  color: black;
+}
+
+@media screen and (min-width: 480px) {
+  table.Exist_Subject_Cell :hover{
+    background-color: #FFC000;
+  }
+  table :hover{
+    background-color: #FFC000;
+  }
+  table .No_Subject_Cell{
+    background-color: #DDD;
+  }
+  th:hover{
+    background-color: #ffffff;
+  }
+  td.TimeTableindex{
+    background-color: #ffffff;
+  }
+}

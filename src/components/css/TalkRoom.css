@@ -1,0 +1,617 @@
+*{
+  text-decoration: none;
+}
+
+.NoDisplay {
+  display: none;
+}
+
+#Show_participant_btn{
+  z-index: 2;
+  display: block;
+  position: fixed;
+  background-color: #fff;
+  border:#386768 2px solid;
+  border-radius: 50%;
+  top: 90px;
+  margin-left: 15px;
+  width: 4em;
+  height: 4em;
+}
+
+#Remove_participant_btn{
+  z-index: 3;
+  display: block;
+  position: fixed;
+  background-color: #fff;
+  border:#386768 2px solid;
+  border-radius: 50%;
+  top: 90px;
+  margin-left: 23px;
+  width: 4em;
+  height: 4em;
+}
+
+/* ヒト型アイコン */
+.profile-solid.icon {
+  z-index: 4;
+  color: #386768;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+  width: 25px;
+  height: 16px;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  border-top: solid 1px currentColor;
+  border-bottom: solid 1px transparent;
+  background-color: currentColor;
+  border-radius: 10px 10px 2px 2px;
+}
+
+.profile-solid.icon:before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+}
+
+
+#Participant_Window{
+  width: 20%;
+  margin: 0;
+  z-index: 2;
+  background-color: #EEEEEE;
+  border:#386768 0 2px 0 2px solid;
+  position: fixed;
+  height: 80%;
+  top: 80px;
+  left:0;
+  text-align: center;
+}
+
+#Participant_Window ul{
+  padding: 0;
+  margin-top: 70px;
+  padding: 10px;
+  text-align: center;
+}
+#Participant_Window ul li{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-bottom: solid 1px #ffffff;
+  background-color: #386768;
+  list-style: none;
+  text-align: center;
+}
+#Participant_Window ul li a{
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+
+.Participant_Window_title{
+  margin: 20px 0;
+}
+
+/* 参加者表示スクロール */
+/* スクロールの幅の設定 */
+.Participant_Window_List{
+  height: 70%;
+  overflow-y: scroll;
+}
+.Participant_Window_List::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+/* スクロールの背景の設定 */
+.Participant_Window_List::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: 0 0 4px #aaa inset;
+}
+/* スクロールのつまみ部分の設定 */
+.Participant_Window_List::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #386768;
+}
+
+main{
+  margin-top: 80px;
+}
+
+/* 入力フォーム ============================= */
+/* フォーム全体の構成 */
+#from{
+  background-color: #F2F2F2;
+  border-top: 2px solid #386768;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 30px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 4;
+}
+
+
+#form_input{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+
+/* 匿名ボタン */
+.Anonymous_Select_label{
+  padding: 8px 10px;
+  border-radius: 5px;
+  background-color: #ccc;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox input:checked  + .Anonymous_Select_label {
+  background-color: #386768;
+  color: #fff;
+}
+
+#Show_StampSelect_btn{
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  margin: 0 15px 0 0;
+  padding: 0 5px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: bold;
+  background: #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-image: url("../../assets/stamp_icon.png");
+  background-position: center;
+}
+
+#Show_StampSelect_btn p{
+  margin: 0;
+  font-size: 30px;
+  color: tomato;
+}
+
+/* スタンプ選択画面 */
+#SelectWindow_Stamp{
+  z-index: 3;
+  background-color: #fff;
+  position: fixed;
+  bottom: 75px;
+  padding: 20px;
+  border: solid 2px #386768;
+  border-radius: 30px;
+}
+
+#Remove_StampSelect_btn{
+  z-index: 2;
+  position: relative;
+  margin: 0 15px 0 0;
+  padding: 0 5px;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+#SelectWindow_Stamp input[type="radio"] {
+  display: none;
+}
+
+/* スタンプ決定時のlabel背景設定 */
+#SelectWindow_Stamp input[type="radio"]:checked + label{
+  background-color: #FFC000;
+}
+
+/* コメント入力 */
+#From_comennt{
+  width: 50%;
+}
+
+#From_comennt textarea{
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: 2px solid #B4C7E7;
+}
+#From_comennt textarea::placeholder{
+  text-align: center;
+  line-height: 40px;
+}
+
+/* 送信ボタン */
+#From_SubmitBtn{
+  background-color: #fff;
+  border: 2px solid #B4C7E7;
+  padding: 5px;
+  font-weight: bold;
+  margin-right: 50px;
+  width: 80px;
+}
+
+/* 投稿欄 */
+#Allpost{
+  padding: 0 10px;
+}
+
+.thepost{
+  max-width: 80%;
+}
+
+.thepost_main{
+  display: flex;
+  align-items: center;
+}
+
+/* アイコンとユーザー名 */
+.thepost_main_user{
+  text-align: center;
+  max-width: 60px;
+}
+
+.thepost_main_user div img{
+  width: 60px;
+  border-radius: 50%;
+  border: 2px solid #484949;
+}
+
+.thepost_time{
+  text-align: right;
+  min-width: 10%;
+}
+.thepost_main_user p{
+  font-size: 80%;
+  margin: 0;
+  text-align: center;
+}
+
+/* 吹き出し */
+.thepost_comment {
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 30px;
+  margin: 0 0 0 30px;
+  padding: 10px 15px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #C0D4F5;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.thepost_comment p{
+  margin: 0;
+}
+
+.thepost_comment:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-right: 12px solid #FFF;
+  z-index: 1;
+}
+
+.thepost_comment:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-right: 14px solid #C0D4F5;
+  z-index: 0;
+}
+
+.thepost_time{
+  margin-top: 5px;
+  font-size: 0.5em;
+}
+
+/* 自分のメッセージ */
+.my_post{
+  margin-left: auto;
+}
+
+.my_post .thepost_main, .my_post .thepost_text{
+  flex-direction: row-reverse;
+}
+
+.thepost_text img{
+  margin: 0 50px 0 50px;
+}
+
+.my_post .thepost_time{
+  text-align: left;
+}
+
+.my_post .thepost_comment {
+  position: relative;
+  display: inline-block;
+  margin: 0 30px 0 5px;
+  padding: 10px 15px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #C0D4F5;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.my_post .thepost_comment:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-left: 12px solid #fff;
+  z-index: 2;
+}
+
+.my_post .thepost_comment:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  right: -30px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-left: 16px solid  #C0D4F5;
+  z-index: 1;
+}
+
+/* 最後の投稿の高さをあわせ */
+.lastdiv{
+  height: 65px;
+}
+
+/* 送信ボタン */
+#From_SubmitBtn{
+  background-color: #F2F2F2;
+  border: none;
+  margin-right: 50px;
+  width: 60px;
+}
+
+#SubmitBtn_img{
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .thepost_main{
+    margin: 0 10px 0 10px;
+  }
+  #Remove_participant_btn:hover,#Show_participant_btn:hover{
+    opacity: 0.6;
+    background-color: #FFC000;
+  }
+  .checkbox input:hover + label:after {
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+  }
+  #SelectWindow_Stamp label:hover{
+    background-color: #FFC000;
+  }
+  #Participant_Window ul li :hover{
+    background: #FFC000;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #Show_participant_btn{
+    margin-left: 0;
+  }
+  #Remove_participant_btn{
+    margin-left: 8px;
+  }
+
+  #Participant_Window{
+    z-index: 2;
+    background-color: #EEEEEE;
+    position: fixed;
+    height:65%;
+    top: 80px;
+    left:0;
+    width: 60%;
+    text-align: center;
+  }
+
+  #Participant_Window a{
+    color: #000;
+  }
+  #Participant_Window li{
+    text-align: left;
+  }
+  #Participant_Window li :hover{
+    color:#FFC000
+  }
+  .Participant_Window_title{
+    margin: 20px 0;
+  }
+
+  /* 参加者表示スクロール */
+  /* スクロールの幅の設定 */
+  .Participant_Window_List{
+    height: 70%;
+    overflow-y: scroll;
+  }
+  .Participant_Window_List::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  /* スクロールの背景の設定 */
+  .Participant_Window_List::-webkit-scrollbar-track {
+    border-radius: 5px;
+    box-shadow: 0 0 4px #aaa inset;
+  }
+  /* スクロールのつまみ部分の設定 */
+  .Participant_Window_List::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #386768;
+  }
+
+  #from{
+    background-color: #F2F2F2;
+    border-top: 2px solid #386768;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 30px;
+    align-items: center;
+    z-index: 4;
+  }
+  #Form_SubmitStamp{
+    width: 20%;
+  }
+  #showshow_StampSelect_btn{
+    width: 70%;
+  }
+  #From_comennt{
+    margin-right: 10%;
+    text-align: left;
+  }
+  .thepost_main{
+    margin-top: 10px;
+  }
+  .thepost_main_user{
+    width: 50px;
+    text-align: center;
+  }
+  .thepost_main_user p{
+    font-size: 80%;
+    margin: 0;
+    text-align: center;
+  }
+  .thepost_main_user div img{
+    text-align: center;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #484949;
+  }
+  .thepost_comment {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0 1.5em 30px;
+    margin: 0 0 0 30px;
+    padding: 10px 15px;
+    min-width: 150px;
+    max-width: 100%;
+    color: #555;
+    font-size: 16px;
+    background: #FFF;
+    border: solid 3px #C0D4F5;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  .thepost_comment p{
+    margin: 0;
+  }
+  .thepost_text img{
+    margin: 0 20px 0 20px;
+  }
+
+  /* 匿名ボタン */
+  .Anonymous_Select_label{
+    padding: 8px 10px;
+    margin-left: -20px;
+    border-radius: 5px;
+    background-color: #ccc;
+  }
+
+  .checkbox input:checked  + .Anonymous_Select_label {
+    background-color: #386768;
+    color: #fff;
+  }
+
+  #Show_StampSelect_btn{
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    margin: 3px 15px 0 0;
+    padding: 0 5px;
+    width:  40px;
+    height: 40px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+    background-image: url("../../assets/stamp_icon.png");
+    background-position: center;
+  }
+  #Remove_StampSelect_btn{
+    z-index: 2;
+    position: relative;
+    margin: 3px 15px 0 0;
+    padding: 0 5px;
+    background-color: #fff;
+    width:  40px;
+    height: 40px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+  }
+  #From_comennt textarea{
+    margin: 0;
+    padding: 0;
+    margin-left: -30px;
+    display: block;
+    width: 200px;
+    height: 40px;
+    border: 2px solid #B4C7E7;
+  }
+  #From_SubmitBtn {
+    background-color: #f2f2f2;
+    border: none;
+    margin: 0;
+    margin-right: 30px;
+    width: 60px;
+  }
+
+  #SubmitBtn_img {
+    width: 70%;
+  }
+}
