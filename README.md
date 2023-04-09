@@ -1,29 +1,16 @@
-# c1meets
+# 1. 概要
+学部3年時に，学内ハッカソンにて友人と作成した**チャットアプリ**です．
 
-大学の演習授業で作成したチャットアプリ
+サイトリンク：[MEETS](https://c1-meets.web.app/)
+（現在はDBの管理などを行っていないので，使用できなくなっている可能性があります．．．）
 
-> A Vue.js project
 
-## Build Setup
+講義（デザイン情報総合演習，通称DIE演）の一環ではありますが，**技術的な指導は一切無く**，自分たちで社会にとって必要となるものを自由に作るというコンセプトの学内ハッカソンでした．
+学生と教員による投票で，**優勝**しました！
 
-``` bash
-# install dependencies
-npm install
+# 2. 背景
+コロナ禍で出会いが無くなってしまい不安に感じる新入生をターゲットに，
+**時間割×チャット**によるサービスを開発しました．
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# 3. システムの構成など
+フロントエンドには主にVue.jsを，バックエンドにはfirebaseを使用しました．
