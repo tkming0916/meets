@@ -41,3 +41,9 @@
 左から順に「初期画面」「時間割」「チャット」「他ユーザの情報閲覧」
 
 <img src="https://user-images.githubusercontent.com/77134979/230755331-fdf125df-37d0-4d79-a4e9-220846181c76.PNG" width=250> <img src="https://user-images.githubusercontent.com/77134979/230755421-ad952f26-bfd5-426f-a227-b4872e5c3cc1.PNG" width=250> <img src="https://user-images.githubusercontent.com/77134979/230755358-1f3ea1e5-feac-44ec-be27-d76d20017bd7.PNG" width=250> <img src="https://user-images.githubusercontent.com/77134979/230756007-281dfb6f-9656-4ccd-87d0-dc0537c3a781.PNG" width=250>
+
+# 6. 紹介動画
+動画容量が大きいため，YouTubeにアップロードしています．
+
+[制作物紹介「MEETS」](https://www.youtube.com/watch?v=QmF_I0uADDg)
+
